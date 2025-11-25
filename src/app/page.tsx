@@ -44,7 +44,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-white w-full flex flex-col md:flex-row items-center px-8 py-16 max-w-7xl mx-auto">
+      <section className="bg-white w-full flex flex-col md:flex-row items-center px-0 py-16 max-w-7xl my-1 mx-auto">
         <div className="
             flex
             w-[160%]
