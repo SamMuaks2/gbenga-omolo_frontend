@@ -10,15 +10,82 @@ export default function Home() {
       {/* Hero Section */}
       <section className="bg-white w-full flex flex-col md:flex-row items-center px-8 py-16 max-w-7xl mx-auto">
         <div className="flex-1">
-          <h1 className="text-5xl font-bold text-green-800 mb-4">
-            GBENGA OMOLE
+          <h1
+            className="
+              font-open-sans
+              text-[120px]
+              font-bold
+              leading-[110px]
+              tracking-[4px]
+            "
+          >
+            <span className="text-[#7DBEBE]">GBENGA</span>{" "}
+            <span className="text-[#397171]">OMOLE</span>
           </h1>
-          <p className="text-gray-600 text-xl">The Practical Word Teacher</p>
+
+          <p
+            className="
+              flex-[1_0_0]
+              text-[#232326]
+              font-montserrat
+              text-[34px]
+              font-medium
+              pt-[5%]
+              leading-[27px]
+            "
+          >
+            The Golden Voice of Wisdom
+          </p>
+
         </div>
-        <div className="flex-1">
-          <Image src="/author.jpg" width={500} height={600} alt="Author" />
+
+        <div className="flex-1 flex justify-center">
+          <Image src="/Images/home-hero.png" width={500} height={600} alt="Author" className="scale-x-[-1]" />
         </div>
       </section>
+
+      <section className="bg-white w-full flex flex-col md:flex-row items-center px-8 py-16 max-w-7xl mx-auto">
+        <div className="
+            flex
+            w-[160%]
+            h-[360px]
+            mx-[0]
+            px-[120px]
+            py-[48px]
+            mt-[-10.5%]
+            flex-col
+            justify-center
+            items-center
+            gap-[24px]
+            bg-[rgba(180,197,214,0.5)]
+          ">
+             <h4
+                className="
+                  text-center
+                  font-open-sans
+                  text-[38px]
+                  font-semibold
+                  leading-normal
+                  text-[#232326]
+                "
+              >
+                Insights Worth More Than Gold.
+              </h4>
+
+              <p
+                className="
+                  text-center
+                  text-[#51555D]
+                  font-montserrat
+                  text-[20px]
+                  font-normal
+                  leading-[30px]
+                "
+              >
+                Discover timeless truths that will feed your faith, shape your character, and guide your life’s decisions.
+              </p>
+          </div>
+        </section>
 
       {/* Featured Book */}
       <section id="books" className="bg-gray-100 py-16 px-8">
