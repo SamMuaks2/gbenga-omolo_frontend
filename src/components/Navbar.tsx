@@ -27,8 +27,8 @@ export default function Navbar() {
       {/* Desktop Menu */}
       <div className="hidden md:flex flex-[1_0_0] justify-between items-center text-gray-700 font-medium">
       {/* <div className="flex justify-between items-center flex-[1_0_0] text-gray-700 font-medium"> */}
-        <Link href="#home">Home</Link>
-        <Link href="#about">About</Link>
+        <Link href="/">Home</Link>
+        <Link href="/About">About</Link>
         <Link href="#devotionals">Devotionals</Link>
         <Link href="#books">Scientific Articles</Link>
         <Link href="#media">Media</Link>
