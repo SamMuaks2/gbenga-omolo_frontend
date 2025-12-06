@@ -4,7 +4,8 @@ export default function HeroSection() {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-white w-full flex flex-col md:flex-row items-center px-8 py-16 max-w-7xl mx-auto">
+      {/* <section className="bg-white w-full flex flex-col md:flex-row items-center px-8 py-16 max-w-7xl mx-auto"> */}
+      <section className="bg-white w-full flex flex-col md:flex-row items-center px-8 py-16 max-w-8xl mx-auto">
         {/* Left Content */}
         <div className="flex-1 ml-[5%]">
           <h1
@@ -36,7 +37,7 @@ export default function HeroSection() {
         </div>
 
         {/* Right Image */}
-        <div className="flex-1 flex justify-center mr-[-7.7%]">
+        <div className="flex-1 flex justify-center mr-[-9%] mb-[1%]">
           <Image
             src="/Images/home-hero.png"
             width={500}
@@ -49,7 +50,7 @@ export default function HeroSection() {
       </section>
 
       {/* CTA / Highlight Section */}
-      <section className="bg-white w-full flex flex-col md:flex-row items-center px-0 py-16 max-w-7xl my-1 mx-auto">
+      <section className="bg-white w-full flex flex-col md:flex-row items-center px-0 py-16 max-w-9xl my-auto mx-auto">
         <div
           className="
             flex

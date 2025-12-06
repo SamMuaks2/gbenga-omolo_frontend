@@ -28,10 +28,10 @@ export default function Navbar() {
       <div className="hidden md:flex flex-[1_0_0] justify-between items-center text-gray-700 font-medium">
       {/* <div className="flex justify-between items-center flex-[1_0_0] text-gray-700 font-medium"> */}
         <Link href="/">Home</Link>
-        <Link href="/About">About</Link>
-        <Link href="#devotionals">Devotionals</Link>
-        <Link href="#books">Scientific Articles</Link>
-        <Link href="#media">Media</Link>
+        <Link href="/about">About</Link>
+        <Link href="/devotionals">Devotionals</Link>
+        <Link href="/articles">Scientific Articles</Link>
+        <Link href="/media">Media</Link>
         {/* <Link href="#contact">Contact</Link> */}
       </div>
 
@@ -48,11 +48,11 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {open && (
         <div className="md:hidden flex flex-col px-6 pb-4 gap-4 text-gray-700 font-medium animate-fadeIn">
-          <Link href="#home" onClick={() => setOpen(false)}>Home</Link>
-          <Link href="#about" onClick={() => setOpen(false)}>About</Link>
-          <Link href="#devotionals" onClick={() => setOpen(false)}>Devotionals</Link>
-          <Link href="#books" onClick={() => setOpen(false)}>Scientific Articles</Link>
-          <Link href="#media" onClick={() => setOpen(false)}>Media</Link>
+          <Link href="/" onClick={() => setOpen(false)}>Home</Link>
+          <Link href="/about" onClick={() => setOpen(false)}>About</Link>
+          <Link href="/devotionals" onClick={() => setOpen(false)}>Devotionals</Link>
+          <Link href="/articles" onClick={() => setOpen(false)}>Scientific Articles</Link>
+          <Link href="/media" onClick={() => setOpen(false)}>Media</Link>
         </div>
       )}
     </nav>
