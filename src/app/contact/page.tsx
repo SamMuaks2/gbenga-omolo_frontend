@@ -38,7 +38,7 @@ export default function ContactPage() {
       <section className="mb-16">
         <h2 className="text-2xl font-semibold mb-4">Contact Details</h2>
 
-        <div className="bg-white shadow rounded-lg p-6 space-y-3">
+        <div className="bg-gray-900 text-white shadow rounded-lg p-6 space-y-3">
           <p><strong>Name:</strong> Gbenga Omole</p>
           <p><strong>Email:</strong> gbengaomoleofficial@example.com</p>
           <p><strong>Phone:</strong> +234 801 234 5678</p>
