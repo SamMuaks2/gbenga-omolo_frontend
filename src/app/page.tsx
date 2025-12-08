@@ -9,13 +9,11 @@ import MeetTheAuthor from "./pages/Author";
 export default function Home() {
   return (
     <main>
-      {/* <Navbar /> */}
       <HeroSection />
       <NewBookSection />
       <FeaturedBooks />
       <TestimonialSection />
       <MeetTheAuthor />
-      {/* <Footer /> */}
     </main>
   );
 }

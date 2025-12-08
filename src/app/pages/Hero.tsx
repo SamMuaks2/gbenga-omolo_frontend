@@ -4,8 +4,8 @@ export default function HeroSection() {
   return (
     <>
       {/* Hero Section */}
-      {/* <section className="bg-white w-full flex flex-col md:flex-row items-center px-8 py-16 max-w-7xl mx-auto"> */}
-      <section className="bg-white w-full flex flex-col md:flex-row items-center px-8 py-16 max-w-8xl mx-auto">
+      {/* <section className="bg-white w-full flex flex-col md:flex-row items-center px-8 py-16 max-w-8xl mx-auto"> */}
+      <section className="bg-gray-900 w-full flex flex-col md:flex-row items-center px-8 py-16 mb-[-5.75%] max-w-8xl mx-auto">
         {/* Left Content */}
         <div className="flex-1 ml-[5%]">
           <h1
@@ -24,7 +24,7 @@ export default function HeroSection() {
           <p
             className="
               flex-[1_0_0]
-              text-[#232326]
+              text-[#fff]
               font-montserrat
               text-[34px]
               font-medium
@@ -50,7 +50,8 @@ export default function HeroSection() {
       </section>
 
       {/* CTA / Highlight Section */}
-      <section className="bg-white w-full flex flex-col md:flex-row items-center px-0 py-16 max-w-9xl my-auto mx-auto">
+      {/* <section className="bg-white w-full flex flex-col md:flex-row items-center px-0 py-16 max-w-9xl my-auto mx-auto"> */}
+      <section className="bg-white w-full flex flex-col md:flex-row items-center px-0 py-2 max-w-9xl my-auto mx-auto">
         <div
           className="
             flex
@@ -59,7 +60,7 @@ export default function HeroSection() {
             mx-[0]
             px-[120px]
             py-[48px]
-            mt-[-10.5%]
+            mt-[-0.5%]
             flex-col
             justify-center
             items-center
