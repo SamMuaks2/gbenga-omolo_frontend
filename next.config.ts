@@ -10,7 +10,7 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'https://backend-gbenga.onrender.com', // Replace with your actual domain
+        hostname: 'backend-gbenga.onrender.com', 
         pathname: '/uploads/**',
       },
     ],
