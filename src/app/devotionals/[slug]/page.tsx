@@ -52,6 +52,11 @@ export default async function DevotionalDetails({
     return <p className="p-20">Devotional not found.</p>;
   }
 
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/api/devotionals/slug/${params.slug}`,
+    { cache: "no-store" }
+  );
+
   return (
     <main className="px-6 md:px-20 py-20 max-w-5xl mx-auto">
       <div className="grid md:grid-cols-2 gap-12 items-start">

@@ -12,41 +12,47 @@ type Devotional = {
   content: string;
 };
 
-const devotionals: Devotional[] = [
+// const devotionals: Devotional[] = [
  
-  {
-      id: "prodigal-god",
-      title: "The Prodigal God",
-      image: "/Images/book1.png",
-      description: "A powerful devotional on grace.",
-      content: "Full devotional content goes here..."
-    },
-    {
-      id: "counterfeit-gods",
-      title: "Counterfeit Gods",
-      image: "/Images/book2.png",
-      description: "Understanding modern idols.",
-      content: "Full devotional content goes here..."
-    },
-    {
-      id: "generous-justice",
-      title: "Generous Justice",
-      image: "/Images/book3.png",
-      description: "Faith and social justice.",
-      content: "Full devotional content goes here..."
-    },
-    {
-      id: "generous-justice-2",
-      title: "Generous Justice 2",
-      image: "/Images/book4.png",
-      description: "Faith and social justice continued.",
-      content: "Full devotional content goes here..."
-    },
-];
+//   {
+//       id: "prodigal-god",
+//       title: "The Prodigal God",
+//       image: "/Images/book1.png",
+//       description: "A powerful devotional on grace.",
+//       content: "Full devotional content goes here..."
+//     },
+//     {
+//       id: "counterfeit-gods",
+//       title: "Counterfeit Gods",
+//       image: "/Images/book2.png",
+//       description: "Understanding modern idols.",
+//       content: "Full devotional content goes here..."
+//     },
+//     {
+//       id: "generous-justice",
+//       title: "Generous Justice",
+//       image: "/Images/book3.png",
+//       description: "Faith and social justice.",
+//       content: "Full devotional content goes here..."
+//     },
+//     {
+//       id: "generous-justice-2",
+//       title: "Generous Justice 2",
+//       image: "/Images/book4.png",
+//       description: "Faith and social justice continued.",
+//       content: "Full devotional content goes here..."
+//     },
+// ];
 
 export default function DevotionalsPage() {
-  // const [devotionals, setDevotionals] = useState<Devotional[]>([]);
+  const [devotionals, setDevotionals] = useState<Devotional[]>([]);
   const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/devotionals`)
+      .then((res) => res.json())
+      .then(setDevotionals);
+  }, []);
 
    return (
     <main className="w-full">
