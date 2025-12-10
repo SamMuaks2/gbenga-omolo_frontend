@@ -48,11 +48,39 @@ export default function DevotionalsPage() {
   const [devotionals, setDevotionals] = useState<Devotional[]>([]);
   const [activeIndex, setActiveIndex] = useState(0);
 
+  const activeDevotional = devotionals[activeIndex] ?? devotionals[0];
+
+
   useEffect(() => {
-    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/devotionals`)
-      .then((res) => res.json())
-      .then(setDevotionals);
-  }, []);
+      fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/devotionals`)
+        .then((res) => res.json())
+        .then((data) =>
+          setDevotionals(
+            data.map((item: any) => ({
+              id: item._id,
+              title: item.title,
+              image: item.coverImage
+                ? item.coverImage.startsWith("http")
+                  ? item.coverImage
+                  : `${process.env.NEXT_PUBLIC_API_URL}/${item.coverImage}`
+                : "/Images/book-placeholder.png", 
+              description: item.summary ?? "",
+              content: item.content ?? "",
+            }))
+          )
+        );
+    }, []);
+
+
+
+  if (devotionals.length === 0) {
+      return (
+        <main className="w-full h-[420px] flex items-center justify-center">
+          <p className="text-gray-500">Loading devotionals...</p>
+        </main>
+      );
+    }
+
 
    return (
     <main className="w-full">
