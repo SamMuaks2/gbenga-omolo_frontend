@@ -83,7 +83,8 @@ export default function DevotionalsPage() {
               className="relative w-full aspect-[3/4] shadow-md hover:scale-105 transition"
             >
               <Image
-                src={item.image}
+                // src={item.image}
+                src={item.coverImage}
                 alt={item.title}
                 fill
                 className="object-cover"
