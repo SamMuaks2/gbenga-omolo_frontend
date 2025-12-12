@@ -25,17 +25,22 @@ export default function DevotionalsPage() {
         .then((res) => res.json())
         .then((data) =>
           setDevotionals(
-            data.map((item: any) => ({
-              id: item._id,
-              title: item.title,
-              image: item.image
-                ? item.coverImage.startsWith("http")
-                  ? item.coverImage
-                  : `${process.env.NEXT_PUBLIC_API_URL}/${item.coverImage}`
-                : "/Images/book-placeholder.png", 
-              description: item.summary ?? "",
-              content: item.content ?? "",
-            }))
+            data.map((item: any) => {
+              const normalizedImage = item.coverImage
+                // ? item.coverImage.replace(/\\/g, "/")
+                ? item.coverImage
+                : "/Images/book-placeholder.png";
+
+              return {
+                id: item._id,
+                title: item.title,
+                image: normalizedImage.startsWith("http")
+                  ? normalizedImage
+                  : `${process.env.NEXT_PUBLIC_API_URL}/${normalizedImage}`,
+                description: item.summary ?? "",
+                content: item.content ?? "",
+              };
+            })
           )
         );
     }, []);
