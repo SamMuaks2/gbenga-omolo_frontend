@@ -85,7 +85,7 @@ export default function DevotionalsPage() {
             >
               <Image
                 // src={item.image}
-                src={item.coverImage}
+                src={item.image}
                 alt={item.title}
                 fill
                 className="object-cover"
