@@ -8,6 +8,7 @@ type Devotional = {
   id: string;
   title: string;
   image: string;
+  // coverImage?: string;
   description: string;
   content: string;
 };
@@ -27,7 +28,7 @@ export default function DevotionalsPage() {
             data.map((item: any) => ({
               id: item._id,
               title: item.title,
-              image: item.coverImage
+              image: item.image
                 ? item.coverImage.startsWith("http")
                   ? item.coverImage
                   : `${process.env.NEXT_PUBLIC_API_URL}/${item.coverImage}`
